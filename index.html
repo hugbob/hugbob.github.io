@@ -94,22 +94,65 @@
         <p>​                                                     山东大学计算机科学与技术学院 </p>
 <p>​                                                          云计算技术  课程实验报告</p>
 <p>学号：202120130266 姓名：鲍俊杰 班级：计科21.1</p>
-<p>实验题目：利用主流云平台搭建个人博客或网站</p>
-<p>实验学时：2 实验日期：2024&#x2F;3&#x2F;22</p>
-<p>实验目的：熟悉使用主流云平台并搭建个人博客或者网站。具体包括：参考方案：基于主流云平台，设计、实现个人博客或者网站的搭建，撰写实验报告（附带网站链接并可以访问），并在网站上呈现此次实验报告。</p>
+<p><strong>实验题目：</strong>利用主流云平台搭建个人博客或网站</p>
+<p><strong>实验学时：</strong>2 实验日期：2024&#x2F;3&#x2F;22</p>
+<p><strong>实验目的：</strong>熟悉使用主流云平台并搭建个人博客或者网站。具体包括：参考方案：基于主流云平台，设计、实现个人博客或者网站的搭建，撰写实验报告（附带网站链接并可以访问），并在网站上呈现此次实验报告。</p>
 <p>网站地址为：<a target="_blank" rel="noopener" href="https://hugbob.github.io/">https://hugbob.github.io</a></p>
-<p>硬件环境： 联网的计算机一台</p>
-<p>软件环境：Windows实验</p>
-<p>步骤与内容：</p>
+<p><strong>硬件环境：</strong> 联网的计算机一台</p>
+<p><strong>软件环境：</strong>Windows</p>
+<p><strong>实验步骤与内容：</strong></p>
 <p>一、 下载node.js和git</p>
-<img src="/2024/03/23/lab3/03/23/lab3/p1.jpg" class title="This is an test image">
-
 <p><img src="/2024/03/23/lab3/p1.jpg"></p>
+<p>二、安装hexo</p>
+<p>新建一个文件夹用来存放 Hexo 的程序文件，如 myblog。打开该文件夹，右键 -&gt; Git Bash Here。</p>
+<ul>
+<li>使用 npm 安装 Hexo 博客：</li>
+</ul>
+<p><code>npm install -g hexo-cli</code></p>
+<ul>
+<li>初始化并安装所需组件：</li>
+</ul>
+<p><code>hexo init    # 初始化</code></p>
+<p><code>npm install   # 安装组件</code></p>
+<ul>
+<li>完成后依次输入下面命令，启动本地服务器进行预览：</li>
+</ul>
+<p><code>hexo g  # 生成页面</code></p>
+<p><code>hexo s  # 启动预览</code></p>
+<p>访问 <a href="http://localhost:4000，出现">http://localhost:4000，出现</a> Hexo 默认页面，本地博客安装成功。</p>
+<p><img src="/2024/03/23/lab3/p2.png"></p>
+<p>在localhost运行结果如下所示：</p>
+<p><img src="/2024/03/23/lab3/p3.png"></p>
+<p>三、本地博客测试成功后，上传到 GitHub 进行部署，使其能够在网络上访问。</p>
+<ul>
+<li>首先安装 hexo-deployer-git：</li>
+</ul>
+<p><code>npm install hexo-deployer-git --save</code></p>
+<p>四、创建并连接github</p>
+<p>新建一个名为 用户名.github.io 的仓库：在本实验中，以用户名为 hugbob为例，新建名为 hugbob.github.io 的仓库，网站地址为：<a target="_blank" rel="noopener" href="https://hugbob.github.io(还需要创建ssh)/">https://hugbob.github.io（还需要创建SSH）</a></p>
+<p><img src="/2024/03/23/lab3/p4.png"></p>
+<p>五、修改博客的配置文件</p>
+<p>打开博客根目录下的_config.yml 文件（博客的配置文件，修改与博客相关的各种信息）。在本实验中以用户名为hugbob为例，修改最后一行的配置为：</p>
+<p><img src="/2024/03/23/lab3/p5.png"></p>
+<p>六、将本地文件部署到github</p>
+<p>执行下面几条命令，将博客部署到 GitHub 上：</p>
+<p><code>hexo clean</code></p>
+<p><code>hexo generate</code></p>
+<p>(若要本地预览就先执行 hexo server)</p>
+<p>hexo deploy</p>
+<p>快捷命令：</p>
+<p><code>hexo g == hexo generate</code></p>
+<p><code>hexo d == hexo deploy</code></p>
+<p><code>hexo s == hexo server</code></p>
+<p><code>hexo n == hexo new</code></p>
+<p>还能组合使用，如：</p>
+<p><code>hexo d -g</code></p>
+<p>六、将实验报告上传至博客</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2024/03/23/lab3/" data-id="clu43hspc0002dkutbdwq2d1s" data-title="lab3" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2024/03/23/lab3/" data-id="clu43qntq0002cwut461ehei7" data-title="lab3" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -195,7 +238,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2024/03/22/hello/" data-id="clu43hspa0001dkute2utdumx" data-title="hello" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2024/03/22/hello/" data-id="clu43qntp0001cwut2ucq97js" data-title="hello" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -246,7 +289,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2024/03/22/hello-world/" data-id="clu43hsp70000dkute0lf25l6" data-title="Hello World" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2024/03/22/hello-world/" data-id="clu43qnti0000cwut1qi76tp5" data-title="Hello World" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
