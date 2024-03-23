@@ -91,13 +91,14 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>​                                                     山东大学计算机科学与技术学院 </p>
+        <p>A PDF version of the document is available here: <a target="_blank" rel="noopener" href="https://hugbob.github.io/files/lab3.pdf">https://hugbob.github.io/files/lab3.pdf</a>   </p>
+<p>Blog URL: <a target="_blank" rel="noopener" href="https://hugbob.github.io/">https://hugbob.github.io</a></p>
+<p>​                                                  山东大学计算机科学与技术学院 </p>
 <p>​                                                          云计算技术  课程实验报告</p>
 <p>学号：202120130266 姓名：鲍俊杰 班级：计科21.1</p>
 <p><strong>实验题目：</strong>利用主流云平台搭建个人博客或网站</p>
 <p><strong>实验学时：</strong>2 实验日期：2024&#x2F;3&#x2F;22</p>
 <p><strong>实验目的：</strong>熟悉使用主流云平台并搭建个人博客或者网站。具体包括：参考方案：基于主流云平台，设计、实现个人博客或者网站的搭建，撰写实验报告（附带网站链接并可以访问），并在网站上呈现此次实验报告。</p>
-<p>网站地址为：<a target="_blank" rel="noopener" href="https://hugbob.github.io/">https://hugbob.github.io</a></p>
 <p><strong>硬件环境：</strong> 联网的计算机一台</p>
 <p><strong>软件环境：</strong>Windows</p>
 <p><strong>实验步骤与内容：</strong></p>
@@ -148,11 +149,27 @@
 <p>还能组合使用，如：</p>
 <p><code>hexo d -g</code></p>
 <p>六、将实验报告上传至博客</p>
+<p><img src="/2024/03/23/lab3/p7.png"></p>
+<p><strong>结论分析与体会：</strong></p>
+<p><em><strong>Hexo + GitHub 文章发布原理</strong></em></p>
+<p>在本地撰写 Markdown 格式文章后，通过 Hexo 解析文档，渲染生成具有主题样式的 HTML 静态网页，再推送到 GitHub 上完成博文的发布。</p>
+<p><img src="/2024/03/23/lab3/p6.png"></p>
+<p><em><strong>Hexo很难对图片进行有效的管理，本地markdown文件中的图片会出现无法在网页中显示的情况，解决方法如下：</strong></em></p>
+<p>（1）设置站点配置_config.yml</p>
+<p><code>post_asset_folder: true</code></p>
+<p>（2）安装插件</p>
+<p><code>npm install hexo-asset-image -- save</code></p>
+<p>（3）引用图片</p>
+<p>运行hexo n “xxxx”来生成md博文时，&#x2F;source&#x2F;_posts文件夹内除了xxxx.md文件还有一个同名的文件夹。接下来就是利用makdown。</p>
+<p>在xxxx.md中想引入图片时，先把图片复制到xxxx这个文件夹中，然后只需要在xxxx.md中按照markdown的格式引入图片：</p>
+<p><code>![这里输入图片描述](图片名.jpg)</code></p>
+<p>必须只能是图片名，不能含有任何前缀，否则网页端无法显示（但这样会导致本地文件中不会显示），可以在编辑时加入相对地址能够在本地显示便于查看，部署时再删除相对路径只保留图片的文件名。</p>
+<p><img src="/2024/03/23/lab3/p8.png"></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2024/03/23/lab3/" data-id="clu43sfkv0000uoutch1t596v" data-title="lab3" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2024/03/23/lab3/" data-id="clu44h17u00002out9p39535q" data-title="lab3" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
